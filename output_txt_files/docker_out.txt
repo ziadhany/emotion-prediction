@@ -1,0 +1,27 @@
+ 16:56:18.01
+ 16:56:18.02 Welcome to the Bitnami pytorch container
+ 16:56:18.02 Subscribe to project updates by watching https://github.com/bitnami/containers
+ 16:56:18.02 Submit issues and feature requests at https://github.com/bitnami/containers/issues
+ 16:56:18.02
+
+There was a problem when trying to write in your cache folder (/.cache/huggingface/hub). You should set the environment variable TRANSFORMERS_CACHE to a writable directory.
+ * Serving Flask app 'app'
+ * Debug mode: on
+/opt/bitnami/python/lib/python3.8/site-packages/transformers/pipelines/text_classification.py:104: UserWarning: `return_all_scores` is now deprecated,  if want a similar funcionality use `top_k=None` instead of `return_all_scores=True` or `top_k=1` instead of `return_all_scores=False`.
+  warnings.warn(
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:9000
+ * Running on http://172.17.0.2:9000
+Press CTRL+C to quit
+ * Restarting with stat
+There was a problem when trying to write in your cache folder (/.cache/huggingface/hub). You should set the environment variable TRANSFORMERS_CACHE to a writable directory.
+/opt/bitnami/python/lib/python3.8/site-packages/transformers/pipelines/text_classification.py:104: UserWarning: `return_all_scores` is now deprecated,  if want a similar funcionality use `top_k=None` instead of `return_all_scores=True` or `top_k=1` instead of `return_all_scores=False`.
+  warnings.warn(
+ * Debugger is active!
+ * Debugger PIN: 859-318-280
+172.17.0.1 - - [09/Feb/2023 16:56:24] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [09/Feb/2023 16:56:57] "GET / HTTP/1.1" 200 -
+[2023-02-09 16:57:05,009] INFO in app: json payload: angry
+[2023-02-09 16:57:05,040] INFO in app: json prediction: [[{'label': 'anger', 'score': 0.9598212242126465}, {'label': 'disgust', 'score': 0.016441993415355682}, {'label': 'fear', 'score': 0.0005624167388305068}, {'label': 'joy', 'score': 0.001589832827448845}, {'label': 'neutral', 'score': 0.0067192683927714825}, {'label': 'sadness', 'score': 0.013709752820432186}, {'label': 'surprise', 'score': 0.0011554803932085633}]]
+172.17.0.1 - - [09/Feb/2023 16:57:05] "POST /classify HTTP/1.1" 200 -

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+             background-color: #ededed;
+             font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+        div {
+            text-align: center;
+        }
+        input {
+          border: none;
+          color: white;
+          padding: 14px 28px;
+          font-size: 16px;
+          cursor: pointer;
+          background-color: #2196F3;
+        }
+        input:hover {
+            background: #0b7dda;
+        }
+        textarea{
+            border: 1px solid transparent;
+            margin: 20px;
+            border-radius: .375em;
+            font-size: 1.5rem;
+            line-height: 2.5;
+            padding: 20px;
+            max-width: 80%;
+        }
+    </style>
+<title>Text-Classification App</title>
+</head>
+<body>
+<div>
+    <h3>Emotion English DistilRoBERTa-base </h3>
+    <p>
+With this model, you can classify emotions in English text data. The model was trained on 6 diverse datasets and predicts Ekman's 6 basic emotions, plus a neutral class:
+    anger
+    disgust
+    fear
+    joy
+    neutral
+    sadness
+    surprise
+</p>
+    <form action="/classify" method="post">
+        <textarea name="w3review" rows="10" cols="80"></textarea>
+        <br>
+      <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>
