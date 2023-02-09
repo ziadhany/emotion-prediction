@@ -9,6 +9,16 @@ setup:
 	python3 -m venv ~/.devops
 	#source ~/.devops/bin/activate
 
+download_model_data:
+	wget -P model_data/  https://huggingface.co/j-hartmann/emotion-english-distilroberta-base/resolve/main/config.json
+	wget -P model_data/  https://huggingface.co/j-hartmann/emotion-english-distilroberta-base/resolve/main/merges.txt
+	wget -P model_data/  https://huggingface.co/j-hartmann/emotion-english-distilroberta-base/resolve/main/special_tokens_map.json
+	wget -P model_data/  https://huggingface.co/j-hartmann/emotion-english-distilroberta-base/resolve/main/tokenizer.json
+	wget -P model_data/  https://huggingface.co/j-hartmann/emotion-english-distilroberta-base/resolve/main/tokenizer_config.json
+	wget -P model_data/  https://huggingface.co/j-hartmann/emotion-english-distilroberta-base/resolve/main/vocab.json
+	wget -P model_data/  https://huggingface.co/j-hartmann/emotion-english-distilroberta-base/resolve/main/pytorch_model.bin
+
+
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
