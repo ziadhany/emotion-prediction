@@ -6,11 +6,7 @@ jobs:
             - image: bitnami/pytorch:1.13.1-debian-11-r18
         working_directory: ~/repo
         steps:
-          - run: apk update 
-          - run: apk upgrade
-          - run: apk add --no-cache openssh
-          - run: apk add git
-
+          - run: apt-get update && apt-get install -y openssh-client git
           - checkout
 
           - restore_cache:
