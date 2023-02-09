@@ -3,9 +3,14 @@ version: 2.1
 jobs:
   build:
         docker:
-            - image: bitnami/pytorch:latest
+            - image: bitnami/pytorch:1.13.1-debian-11-r18
         working_directory: ~/repo
         steps:
+          - run: apk update 
+          - run: apk upgrade
+          - run: apk add --no-cache openssh
+          - run: apk add git
+
           - checkout
 
           - restore_cache:
