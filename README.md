@@ -4,6 +4,9 @@
 Emotion detection from text, simple flask app with `j-hartmann/emotion-english-distilroberta-base` pre-train model
 
 
+https://user-images.githubusercontent.com/29133904/217961246-475aa44c-cfa4-4d79-8edc-b8a443bcfddb.mp4
+
+
 ## Setup the Environment
 
 * Create a virtualenv with Python and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
