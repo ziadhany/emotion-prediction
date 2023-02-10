@@ -4,8 +4,7 @@ jobs:
   build:
         docker:
             - image: bitnami/pytorch:1.13.1-debian-11-r18
-        working_directory: ~/repo
-        
+    
         steps:
           - run: sudo mkdir -m 777 ~/repo
           - run: sudo apt-get update && apt-get install -y openssh-client git
