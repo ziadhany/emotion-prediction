@@ -2,13 +2,12 @@ version: 2.1
 
 jobs:
   build:
-        machine: true
         docker:
             - image: bitnami/pytorch:1.13.1-debian-11-r18
+        working_directory: ~/repo
         steps:
-          - run: chown -R $USER:$USER /project
-          - run: sudo apt-get update && apt-get install -y openssh-client git 
-          - checkout
+          - checkout:
+              path: ~/repo
 
           - restore_cache:
               keys:
