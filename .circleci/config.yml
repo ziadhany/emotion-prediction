@@ -9,10 +9,7 @@ jobs:
         steps:
           - run: mkdir repo
           - run: apt-get update && apt-get install -y openssh-client git wget make
-
-          - checkout:
-              path: /repo
-
+          - checkout
           - restore_cache:
               keys:
               - v1-dependencies-{{ checksum "requirements.txt" }}
