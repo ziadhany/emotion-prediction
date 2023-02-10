@@ -7,8 +7,9 @@ jobs:
         working_directory: ~/repo
         
         steps:
-          - run: sudo apt-get update && apt-get install -y openssh-client git
           - run: sudo mkdir -m 777 ~/repo
+          - run: sudo apt-get update && apt-get install -y openssh-client git
+
           - checkout:
               path: ~/repo
 
