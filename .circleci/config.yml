@@ -2,6 +2,7 @@ version: 2.1
 
 jobs:
   build:
+        machine: true
         docker:
             - image: bitnami/pytorch:1.13.1-debian-11-r18
         steps:
