@@ -6,11 +6,11 @@ jobs:
             - image: bitnami/pytorch:1.13.1-debian-11-r18
         working_directory: /app
         steps:
-          - run: mkdir /app
+          - run: mkdir repo
           - run: sudo apt-get update && apt-get install -y openssh-client git
 
           - checkout:
-              path: /app
+              path: /repo
 
           - restore_cache:
               keys:
